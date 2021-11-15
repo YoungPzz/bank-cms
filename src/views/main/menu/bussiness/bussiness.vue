@@ -1,6 +1,6 @@
 <template>
   <div class="bussiness">
-    <el-button type="primary" @click="getIMG">获取数据</el-button>
+    <!-- <el-button type="primary" @click="getIMG"></el-button> -->
      <img :src="'data:image/png;base64,'+data2" alt="">
      <img :src="'data:image/png;base64,'+data1" alt="">
   </div>
