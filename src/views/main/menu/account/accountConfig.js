@@ -26,7 +26,7 @@ export const AccountqueryInfoConfig = {
       placeholder: "透支额",
     },
     {
-      field: "customer_ids",
+      field: "customer_id[]",
       type: "input",
       label: "账户所属的客户身份证号列表",
       placeholder: "账户所属的客户身份证号列表",

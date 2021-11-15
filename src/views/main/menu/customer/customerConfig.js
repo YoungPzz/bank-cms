@@ -80,14 +80,14 @@ export  const CutomerqueryInfoConfig = {
       {
         field: "old_customer_id",
         type: "input",
-        label: "旧·客户身份证号量",
+        label: "旧·客户身份证号",
         placeholder: "旧·客户身份证号",
       },
       {
         field: "customer_id",
         type: "input",
-        label: "	客户身份证号",
-        placeholder: "	客户身份证号",
+        label: "客户身份证号",
+        placeholder: "客户身份证号",
       },
       {
         field: "customer_name",

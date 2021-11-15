@@ -26,7 +26,7 @@ export  const LoansqueryInfoConfig = {
         placeholder: "贷款额",
       },
       {
-        field:"customer_ids",
+        field:"customer_id[]",
         type: "input",
         label: "客户身份证号列表",
         placeholder: "客户身份证号列表",
