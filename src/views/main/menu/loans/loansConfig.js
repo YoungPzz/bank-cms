@@ -78,35 +78,23 @@ export  const LoansqueryInfoConfig = {
     ],
     updateItem: [
       {
-        field: "num",
+        field: "payment_time",
         type: "input",
-        label: "请求数据量",
-        placeholder: "请输入请求数据量",
+        label: "支付时间",
+        placeholder: "请输入请求支付时间",
       },
       {
-        field: "page",
+        field: "loan_id",
         type: "input",
-        label: "当前页数",
-        placeholder: "请输入当前页数",
+        label: "贷款号",
+        placeholder: "请输入贷款号",
       },
       {
-        field: "branch_name",
+        field: "payment_money",
         type: "input",
-        label: "支付名",
-        placeholder: "支付名",
-      },
-      {
-        field: "branch_asserts",
-        type: "input",
-        label: "支付资产",
-        placeholder: "支付资产",
-      },
-      {
-        field: "branch_city",
-        type: "input",
-        label: "支付城市",
-        placeholder: "支付所在城市",
-      },
+        label: "支付金额",
+        placeholder: "不能为0",
+      }
     ],
     deleteItem: [
       {

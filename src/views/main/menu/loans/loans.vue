@@ -8,6 +8,7 @@
       @deleteAxios="deleteAxios()"
       @updatetAxios="updatetAxios()"
       @searchAxios="searchAxios()"
+      @createAxios="createAxios()"
       @ShowYpTable="ShowYpTable()"
       @DisplayYpTable="DisplayYpTable()"
     />
@@ -44,6 +45,9 @@ export default defineComponent({
         name: "检索贷款",
       },
       {
+        name: "创建贷款支付",
+      },
+      {
         name: "删除贷款",
       },
     ]);
@@ -65,6 +69,9 @@ export default defineComponent({
       UpdateAxios("/loan/update", formOriginData);
       //获取listData
     };
+    const createAxios = ()=>{
+      UpdateAxios('/payment/create',formOriginData)
+    }
     let listData = ref([]);
     const searchAxios = () => {
       searchItem("/loan/retrieve").then((res) => {
@@ -92,6 +99,7 @@ export default defineComponent({
       updatetAxios,
       searchAxios,
       ShowYpTable,
+      createAxios,
       DisplayYpTable,
       isShowYpTable,
     };

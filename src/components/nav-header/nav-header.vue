@@ -165,8 +165,11 @@
             <el-button type="primary" @click="searchAxios()" v-if="index === 1"
               >确定检索</el-button
             >
-            <el-button type="primary" @click="updatetAxios()" v-if="index === 2"
+            <el-button type="primary" @click="updatetAxios()" v-if="index === 2 && item.name!== '创建贷款支付'"
               >确定更新</el-button
+            >
+            <el-button type="primary" @click="createAxios()" v-if="index === 2 && item.name=== '创建贷款支付'"
+              >确定创建</el-button
             >
             <el-button type="primary" @click="deleteAxios()" v-if="index === 3"
               >确定删除</el-button
@@ -242,7 +245,9 @@ export default {
     const deleteAxios = () => {
       context.emit("deleteAxios");
     };
-
+    const createAxios = () => {
+      context.emit("createAxios");
+    };
     //触发yptable
     let currentTab=ref(0)
     const SearchIndex = 1;
@@ -254,7 +259,7 @@ export default {
       context.emit('DisplayYpTable')
     }
     }
-    return { commitAxios,searchAxios,updatetAxios,deleteAxios,showSearch,currentTab };
+    return { commitAxios,createAxios,searchAxios,updatetAxios,deleteAxios,showSearch,currentTab };
   },
 };
 </script>
