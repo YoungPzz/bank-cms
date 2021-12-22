@@ -20,10 +20,16 @@ export const AccountqueryInfoConfig = {
       placeholder: "负责人的身份证号",
     },
     {
-      field: "overdraft",
+      field: "rate",
       type: "input",
-      label: "透支额",
-      placeholder: "透支额",
+      label: "利率",
+      placeholder: "利率",
+    },
+    {
+      field: "currency_type",
+      type: "input",
+      label: "货币类型",
+      placeholder: "货币类型",
     },
     {
       field: "customer_id[]",
@@ -64,10 +70,16 @@ export const AccountqueryInfoConfig = {
     //   placeholder: "负责人的身份证号",
     // },
     // {
-    //   field: "overdraft",
+    //   field: "rate",
     //   type: "input",
-    //   label: "透支额",
-    //   placeholder: "透支额",
+    //   label: "利率",
+    //   placeholder: "利率",
+    // },
+    // {
+    //   field: "currency_type",
+    //   type: "input",
+    //   label: "货币类型",
+    //   placeholder: "货币类型",
     // },
   ],
   updateItem: [
@@ -90,16 +102,22 @@ export const AccountqueryInfoConfig = {
       placeholder: "负责人的身份证号",
     },
     {
-      field: "overdraft",
+      field: "rate",
       type: "input",
-      label: "透支额",
-      placeholder: "透支额",
+      label: "利率",
+      placeholder: "利率",
     },
     {
       field: "account_balance",
       type: "input",
       label: "余额",
       placeholder: "余额",
+    },
+    {
+      field: "currency_type",
+      type: "input",
+      label: "货币类型",
+      placeholder: "货币类型",
     },
   ],
   deleteItem: [
@@ -108,15 +126,15 @@ export const AccountqueryInfoConfig = {
       type: "input",
       label: "账户号",
       placeholder: "账户号",
-    }
+    },
   ],
-  proplist:[
-    { prop: 'account_id', label: '账户号', minWidth: '100' },
-    { prop: 'account_balance', label: '余额', minWidth: '100' },
-    { prop: 'account_open_date', label: '开户日期', minWidth: '100' },
-    { prop: 'branch_name', label: '支行名', minWidth: '100' },
-    { prop: 'staff_id', label: '负责人的身份证号', minWidth: '100' },
-    { prop: 'overdraft', label: '透支额', minWidth: '100' }
-    
+  proplist: [
+    { prop: "account_id", label: "账户号", minWidth: "100" },
+    { prop: "account_balance", label: "余额", minWidth: "100" },
+    { prop: "account_open_date", label: "开户日期", minWidth: "100" },
+    { prop: "branch_name", label: "支行名", minWidth: "100" },
+    { prop: "staff_id", label: "负责人的身份证号", minWidth: "100" },
+    { prop: "rate", label: "利率", minWidth: "100" },
+    { prop: "currency_type", label: "货币类型", minWidth: "100" },
   ],
 };

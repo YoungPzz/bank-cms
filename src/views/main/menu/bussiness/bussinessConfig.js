@@ -39,36 +39,36 @@ export  const BussinesstqueryInfoConfig = {
       }
     ],
     checkItem: [
-      {
-        field: "num",
-        type: "input",
-        label: "请求数据量",
-        placeholder: "请输入请求数据量",
-      },
-      {
-        field: "page",
-        type: "input",
-        label: "当前页数",
-        placeholder: "请输入当前页数",
-      },
-      {
-        field: "branch_name",
-        type: "input",
-        label: "支付名",
-        placeholder: "支付名",
-      },
-      {
-        field: "branch_asserts",
-        type: "input",
-        label: "支付资产",
-        placeholder: "支付资产",
-      },
-      {
-        field: "branch_city",
-        type: "input",
-        label: "支付城市",
-        placeholder: "支付所在城市",
-      }
+      // {
+      //   field: "num",
+      //   type: "input",
+      //   label: "请求数据量",
+      //   placeholder: "请输入请求数据量",
+      // },
+      // {
+      //   field: "page",
+      //   type: "input",
+      //   label: "当前页数",
+      //   placeholder: "请输入当前页数",
+      // },
+      // {
+      //   field: "branch_name",
+      //   type: "input",
+      //   label: "支付名",
+      //   placeholder: "支付名",
+      // },
+      // {
+      //   field: "branch_asserts",
+      //   type: "input",
+      //   label: "支付资产",
+      //   placeholder: "支付资产",
+      // },
+      // {
+      //   field: "branch_city",
+      //   type: "input",
+      //   label: "支付城市",
+      //   placeholder: "支付所在城市",
+      // }
     ],
     updateItem: [
       {

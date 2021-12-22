@@ -10,8 +10,8 @@ export  const LoansqueryInfoConfig = {
       {
         field: "branch_name",
         type: "input",
-        label: "支付名",
-        placeholder: "请输入支付名",
+        label: "支行名",
+        placeholder: "请输入支行名",
       },
       {
         field: "staff_id",
@@ -33,48 +33,48 @@ export  const LoansqueryInfoConfig = {
       }
     ],
     checkItem: [
-      {
-        field: "num",
-        type: "input",
-        label: "请求数据量",
-        placeholder: "请输入请求数据量",
-      },
-      {
-        field: "page",
-        type: "input",
-        label: "当前页数",
-        placeholder: "请输入当前页数",
-      },
-      {
-        field: "loan_id",
-        type: "input",
-        label: "贷款号",
-        placeholder: "贷款号",
-      },
-      {
-        field: "loan_money",
-        type: "input",
-        label: "贷款额",
-        placeholder: "贷款额",
-      },
-      {
-        field: "loan_state",
-        type: "input",
-        label: "贷款状态",
-        placeholder: "贷款状态",
-      },
-      {
-        field: "branch_name",
-        type: "input",
-        label: "支行名",
-        placeholder: "支行名",
-      },
-      {
-        field: "staff_id",
-        type: "input",
-        label: "负责人的身份证号",
-        placeholder: "负责人的身份证号",
-      }
+      // {
+      //   field: "num",
+      //   type: "input",
+      //   label: "请求数据量",
+      //   placeholder: "请输入请求数据量",
+      // },
+      // {
+      //   field: "page",
+      //   type: "input",
+      //   label: "当前页数",
+      //   placeholder: "请输入当前页数",
+      // },
+      // {
+      //   field: "loan_id",
+      //   type: "input",
+      //   label: "贷款号",
+      //   placeholder: "贷款号",
+      // },
+      // {
+      //   field: "loan_money",
+      //   type: "input",
+      //   label: "贷款额",
+      //   placeholder: "贷款额",
+      // },
+      // {
+      //   field: "loan_state",
+      //   type: "input",
+      //   label: "贷款状态",
+      //   placeholder: "贷款状态",
+      // },
+      // {
+      //   field: "branch_name",
+      //   type: "input",
+      //   label: "支行名",
+      //   placeholder: "支行名",
+      // },
+      // {
+      //   field: "staff_id",
+      //   type: "input",
+      //   label: "负责人的身份证号",
+      //   placeholder: "负责人的身份证号",
+      // }
     ],
     updateItem: [
       {

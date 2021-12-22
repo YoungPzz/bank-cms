@@ -11,11 +11,7 @@
       active-text-color="#0a60bd"
     >
       <template v-for="(item, ind) in userMenus">
-        <el-menu-item
-          :index="ind"
-          class="elMENUI"
-          @click="toCurrentRoute(ind)"
-        >
+        <el-menu-item :index="ind" class="elMENUI" @click="toCurrentRoute(ind)">
           <strong>{{ item.name }}</strong>
         </el-menu-item>
       </template>
@@ -49,9 +45,15 @@ export default {
           router.push("/main/account");
           break;
         case 4:
-          router.push("/main/loans");
+          router.push("/main/account_2");
           break;
         case 5:
+          router.push("/main/contacts");
+          break;
+        case 6:
+          router.push("/main/loans");
+          break;
+        case 7:
           router.push("/main/bussiness");
           break;
       }

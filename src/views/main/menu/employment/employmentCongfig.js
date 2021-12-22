@@ -61,66 +61,66 @@ export  const queryInfoConfig = {
     },
   ],
   checkItem: [
-    {
-      field: "num",
-      type: "input",
-      label: "请求数据量",
-      placeholder: "请输入请求数据量",
-    },
-    {
-      field: "page",
-      type: "input",
-      label: "当前页数",
-      placeholder: "请输入当前页数",
-    },
-    {
-      field: "staff_id",
-      type: "input",
-      label: "员工身份证号",
-      placeholder: "员工身份证号",
-    },
-    {
-      field: "staff_name",
-      type: "input",
-      label: "员工姓名",
-      placeholder: "员工姓名",
-    },
-    {
-      field: "staff_manager_id",
-      type: "input",
-      label: "经理身份证号",
-      placeholder: "经理身份证号",
-    },
-    {
-      field: "staff_startwork_date",
-      type: "input",
-      label: "入职日期",
-      placeholder: "入职日期",
-    },
-    {
-      field: "staff_department_number",
-      type: "input",
-      label: "部门号",
-      placeholder: "部门号",
-    },
-    {
-      field: "staff_phone",
-      type: "input",
-      label: "电话号码",
-      placeholder: "电话号码",
-    },
-    {
-      field: "staff_address",
-      type: "input",
-      label: "住址",
-      placeholder: "住址",
-    },
-    {
-      field: "staff_work_branch",
-      type: "input",
-      label: "所在支行",
-      placeholder: "所在支行",
-    }
+    // {
+    //   field: "num",
+    //   type: "input",
+    //   label: "请求数据量",
+    //   placeholder: "请输入请求数据量",
+    // },
+    // {
+    //   field: "page",
+    //   type: "input",
+    //   label: "当前页数",
+    //   placeholder: "请输入当前页数",
+    // },
+    // {
+    //   field: "staff_id",
+    //   type: "input",
+    //   label: "员工身份证号",
+    //   placeholder: "员工身份证号",
+    // },
+    // {
+    //   field: "staff_name",
+    //   type: "input",
+    //   label: "员工姓名",
+    //   placeholder: "员工姓名",
+    // },
+    // {
+    //   field: "staff_manager_id",
+    //   type: "input",
+    //   label: "经理身份证号",
+    //   placeholder: "经理身份证号",
+    // },
+    // {
+    //   field: "staff_startwork_date",
+    //   type: "input",
+    //   label: "入职日期",
+    //   placeholder: "入职日期",
+    // },
+    // {
+    //   field: "staff_department_number",
+    //   type: "input",
+    //   label: "部门号",
+    //   placeholder: "部门号",
+    // },
+    // {
+    //   field: "staff_phone",
+    //   type: "input",
+    //   label: "电话号码",
+    //   placeholder: "电话号码",
+    // },
+    // {
+    //   field: "staff_address",
+    //   type: "input",
+    //   label: "住址",
+    //   placeholder: "住址",
+    // },
+    // {
+    //   field: "staff_work_branch",
+    //   type: "input",
+    //   label: "所在支行",
+    //   placeholder: "所在支行",
+    // }
   ],
   updateItem: [
     {

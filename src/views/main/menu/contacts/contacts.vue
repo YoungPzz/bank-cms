@@ -2,7 +2,7 @@
   <div class="account">
     <nav-header
       :pageContentItem="pageContentItem"
-      v-bind="AccountqueryInfoConfig"
+      v-bind="CutomerqueryInfoConfig"
       :formData="formData"
       @getData="getData()"
       @deleteAxios="deleteAxios()"
@@ -11,29 +11,46 @@
       @ShowYpTable="ShowYpTable()"
       @DisplayYpTable="DisplayYpTable()"
     />
+    <yp-table
+      v-if="isShowYpTable"
+      v-bind="CutomerqueryInfoConfig"
+      :listData="listData"
+    />
   </div>
-  <yp-table
-    v-if="isShowYpTable"
-    v-bind="AccountqueryInfoConfig"
-    :listData="listData"
-  />
 </template>
 
 <script>
 import NavHeader from "../../../../components/nav-header/nav-header.vue";
 import { ref, defineComponent } from "vue";
-import { AccountqueryInfoConfig } from "./accountConfig";
-import { pageContentItem } from "./pageContentItem";
-import {creatNew, DeleteAxios, UpdateAxios} from "../../../../service/index";
+import { CutomerqueryInfoConfig } from "./contactsConfig";
 import YpTable from "../../../../components/yp-table/yp-table.vue";
-import { searchItem } from "../../../../service/index";
+import {
+  creatNew,
+  searchItem,
+  DeleteAxios,
+  UpdateAxios,
+} from "../../../../service/index";
 export default defineComponent({
   components: {
     "nav-header": NavHeader,
     YpTable,
   },
   setup() {
-    const formItems = AccountqueryInfoConfig.searchItem;
+    const pageContentItem = ref([
+      {
+        name: "创建联系人",
+      },
+      {
+        name: "检索联系人",
+      },
+      {
+        name: "更新联系人",
+      },
+      {
+        name: "删除联系人",
+      },
+    ]);
+    const formItems = CutomerqueryInfoConfig.searchItem;
     const formOriginData = {};
     for (const item of formItems) {
       formOriginData[item.field] = "";
@@ -41,23 +58,24 @@ export default defineComponent({
 
     const formData = ref(formOriginData);
 
-    //创建
+    //axios
     const getData = () => {
-      creatNew(`/check_account/create`, formOriginData);
+      creatNew("/contacts/create", formOriginData);
     };
-     const deleteAxios = () => {
-      DeleteAxios("/account/delete", formOriginData);
+    const deleteAxios = () => {
+      DeleteAxios("/contacts/retrieve", formOriginData);
       //获取listData
     };
     const updatetAxios = () => {
-      UpdateAxios("/check_account/update", formOriginData);
+      UpdateAxios("/contacts/update", formOriginData);
       //获取listData
     };
     let listData = ref([]);
     const searchAxios = () => {
-      searchItem("/check_account/retrieve").then((res) => {
+      searchItem("/contacts/retrieve").then((res) => {
         //由于searchItem返回的是Promise对象，所以要用.then
-        listData.value = res.CheckAccount;
+        console.log(res)
+        listData.value = res.Contacts;
       });
     };
 
@@ -69,8 +87,19 @@ export default defineComponent({
     const DisplayYpTable = () => {
       isShowYpTable.value = false;
     };
-    return { pageContentItem, AccountqueryInfoConfig, formData, getData,
-    deleteAxios,updatetAxios,searchAxios,ShowYpTable,DisplayYpTable,isShowYpTable,listData };
+    return {
+      pageContentItem,
+      CutomerqueryInfoConfig,
+      formData,
+      getData,
+      listData,
+      deleteAxios,
+      updatetAxios,
+      searchAxios,
+      ShowYpTable,
+      DisplayYpTable,
+      isShowYpTable,
+    };
   },
 });
 </script>

@@ -45,36 +45,36 @@ export  const CutomerqueryInfoConfig = {
       }
     ],
     checkItem: [
-      {
-        field: "num",
-        type: "input",
-        label: "请求数据量",
-        placeholder: "请输入请求数据量",
-      },
-      {
-        field: "page",
-        type: "input",
-        label: "当前页数",
-        placeholder: "请输入当前页数",
-      },
-      {
-        field: "customer_id",
-        type: "input",
-        label: "客户身份证号",
-        placeholder: "客户身份证号",
-      },
-      {
-        field: "customer_name",
-        type: "input",
-        label: "客户姓名",
-        placeholder: "客户姓名",
-      },
-      {
-        field: "customer_phone",
-        type: "input",
-        label: "电话号码",
-        placeholder: "电话号码",
-      }
+      // {
+      //   field: "num",
+      //   type: "input",
+      //   label: "请求数据量",
+      //   placeholder: "请输入请求数据量",
+      // },
+      // {
+      //   field: "page",
+      //   type: "input",
+      //   label: "当前页数",
+      //   placeholder: "请输入当前页数",
+      // },
+      // {
+      //   field: "customer_id",
+      //   type: "input",
+      //   label: "客户身份证号",
+      //   placeholder: "客户身份证号",
+      // },
+      // {
+      //   field: "customer_name",
+      //   type: "input",
+      //   label: "客户姓名",
+      //   placeholder: "客户姓名",
+      // },
+      // {
+      //   field: "customer_phone",
+      //   type: "input",
+      //   label: "电话号码",
+      //   placeholder: "电话号码",
+      // }
     ],
     updateItem: [
       {

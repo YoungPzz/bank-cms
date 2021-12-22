@@ -1,5 +1,5 @@
 <template>
-  <div class="account">
+  <div class="account_2">
     <nav-header
       :pageContentItem="pageContentItem"
       v-bind="AccountqueryInfoConfig"
@@ -22,9 +22,9 @@
 <script>
 import NavHeader from "../../../../components/nav-header/nav-header.vue";
 import { ref, defineComponent } from "vue";
-import { AccountqueryInfoConfig } from "./accountConfig";
+import { AccountqueryInfoConfig } from "./account_2Config";
 import { pageContentItem } from "./pageContentItem";
-import {creatNew, DeleteAxios, UpdateAxios} from "../../../../service/index";
+import { creatNew, DeleteAxios, UpdateAxios } from "../../../../service/index";
 import YpTable from "../../../../components/yp-table/yp-table.vue";
 import { searchItem } from "../../../../service/index";
 export default defineComponent({
@@ -43,21 +43,21 @@ export default defineComponent({
 
     //创建
     const getData = () => {
-      creatNew(`/check_account/create`, formOriginData);
+      creatNew(`/saving_account/create`, formOriginData);
     };
-     const deleteAxios = () => {
+    const deleteAxios = () => {
       DeleteAxios("/account/delete", formOriginData);
       //获取listData
     };
     const updatetAxios = () => {
-      UpdateAxios("/check_account/update", formOriginData);
+      UpdateAxios("/saving_account/update", formOriginData);
       //获取listData
     };
     let listData = ref([]);
     const searchAxios = () => {
-      searchItem("/check_account/retrieve").then((res) => {
+      searchItem("/saving_account/retrieve").then((res) => {
         //由于searchItem返回的是Promise对象，所以要用.then
-        listData.value = res.CheckAccount;
+        listData.value = res.SavingAccount;
       });
     };
 
@@ -69,8 +69,19 @@ export default defineComponent({
     const DisplayYpTable = () => {
       isShowYpTable.value = false;
     };
-    return { pageContentItem, AccountqueryInfoConfig, formData, getData,
-    deleteAxios,updatetAxios,searchAxios,ShowYpTable,DisplayYpTable,isShowYpTable,listData };
+    return {
+      pageContentItem,
+      AccountqueryInfoConfig,
+      formData,
+      getData,
+      deleteAxios,
+      updatetAxios,
+      searchAxios,
+      ShowYpTable,
+      DisplayYpTable,
+      isShowYpTable,
+      listData,
+    };
   },
 });
 </script>
